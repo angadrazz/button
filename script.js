@@ -10,3 +10,12 @@ const closeWindow = (message) => {
     window.close();
   };
   
+  window.addEventListener('message', (event) => {
+    if (event.data?.foo) {
+      response.innerText = event.data.foo;
+    }
+    if (event.data?.msg) {
+      response.innerText = event.data.msg;
+    }
+  });
+  
